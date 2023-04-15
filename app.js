@@ -51,7 +51,7 @@ for (let i = 0; i < 20; i++) {
   const id = (person.gender = gender);
   if (gender === 'Male') person.name = maleNames[randChoice(maleNames)];
   if (gender === 'Female') person.name = femaleNames[randChoice(femaleNames)];
-  person.lastNames = lastNames[randChoice(lastNames)];
+  person.lastNames = lastNames[Math.floor(Math.random() * lastNames.length)];
   person.age = Math.floor(Math.random() * (70 - 10) + 10);
   person.email =
     person.name.toLowerCase() +
