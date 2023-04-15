@@ -53,6 +53,12 @@ for (let i = 0; i < 20; i++) {
   if (gender === 'F') person.name = femaleNames[randChoice(femaleNames)];
   person.lastNames = lastNames[randChoice(lastNames)];
   person.age = Math.floor(Math.random() * (70 - 10) + 10);
+  person.email =
+    person.name.toLowerCase() +
+    '.' +
+    person.lastName.toLocaleLowerCase() +
+    '@gmail.com';
+  person.phone = '+44' + Math.floor(Math.random() * 1000000000 + 1000000000);
   people.push(person);
 }
 
