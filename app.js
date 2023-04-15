@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const genders = ['M', 'F'];
+const genders = ['Male', 'Female'];
 const maleNames = [
   'Keven',
   'Tobias',
@@ -49,16 +49,16 @@ for (let i = 0; i < 20; i++) {
   const person = {};
   const gender = genders[randChoice(genders)];
   const id = (person.gender = gender);
-  if (gender === 'M') person.name = maleNames[randChoice(maleNames)];
-  if (gender === 'F') person.name = femaleNames[randChoice(femaleNames)];
+  if (gender === 'Male') person.name = maleNames[randChoice(maleNames)];
+  if (gender === 'Female') person.name = femaleNames[randChoice(femaleNames)];
   person.lastNames = lastNames[randChoice(lastNames)];
   person.age = Math.floor(Math.random() * (70 - 10) + 10);
   person.email =
     person.name.toLowerCase() +
     '.' +
-    person.lastName.toLocaleLowerCase() +
+    person.lastNames.toLocaleLowerCase() +
     '@gmail.com';
-  person.phone = '+44' + Math.floor(Math.random() * 1000000000 + 1000000000);
+  person.phone = '+48' + Math.floor(Math.random() * 1000000000 + 1000000000);
   people.push(person);
 }
 
